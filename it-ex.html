@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>R.P Developer</title>
+    <title>R.P Developer - Professional IT Solutions</title>
     <style>
         * {
             margin: 0;
@@ -74,6 +74,7 @@
             display: flex;
             list-style: none;
             gap: 2rem;
+            align-items: center;
         }
 
         .nav-links a {
@@ -102,6 +103,36 @@
 
         .nav-links a:hover::after {
             width: 100%;
+        }
+
+        .language-switcher {
+            display: flex;
+            gap: 10px;
+            background: rgba(0, 212, 255, 0.1);
+            padding: 5px;
+            border-radius: 25px;
+            border: 1px solid rgba(0, 212, 255, 0.3);
+        }
+
+        .lang-btn {
+            padding: 8px 16px;
+            background: transparent;
+            border: none;
+            border-radius: 20px;
+            color: #ccc;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+        }
+
+        .lang-btn.active {
+            background: #00d4ff;
+            color: #000;
+            font-weight: 600;
+        }
+
+        .lang-btn:hover {
+            color: #00d4ff;
         }
 
         /* Hero Section */
@@ -175,6 +206,14 @@
             }
         }
 
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: fadeInUp 1s ease-out 1s both;
+        }
+
         .cta-button {
             display: inline-block;
             padding: 1rem 2rem;
@@ -186,7 +225,12 @@
             transition: all 0.3s ease;
             position: relative;
             overflow: hidden;
-            animation: fadeInUp 1s ease-out 1s both;
+        }
+
+        .cta-button.secondary {
+            background: transparent;
+            border: 2px solid #00d4ff;
+            color: #00d4ff;
         }
 
         .cta-button::before {
@@ -490,6 +534,105 @@
             color: #ccc;
         }
 
+        /* WhatsApp Float */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+            background: #25d366;
+            border-radius: 50%;
+            padding: 12px;
+            box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+            transition: all 0.3s ease;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+        }
+
+        .whatsapp-float::before {
+            content: '💬';
+            font-size: 24px;
+            color: white;
+        }
+
+        /* Page 2 Styles */
+        .page-2 {
+            display: none;
+            padding: 8rem 0 2rem;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%);
+            min-height: 100vh;
+        }
+
+        .page-content {
+            color: #ccc;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+        }
+
+        .page-content h2 {
+            color: #00d4ff;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .page-content h3 {
+            color: #fff;
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .feature-card {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            padding: 2rem;
+            border-radius: 15px;
+            border: 1px solid rgba(0, 212, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 212, 255, 0.2);
+        }
+
+        .feature-card h4 {
+            color: #00d4ff;
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+        }
+
+        .feature-card p {
+            color: #ccc;
+            line-height: 1.6;
+        }
+
+        .back-btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background: linear-gradient(45deg, #00d4ff, #0099cc);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin-bottom: 2rem;
+        }
+
+        .back-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0, 212, 255, 0.4);
+        }
+
         /* Responsive Design */
         @media (max-width: 768px) {
             .nav-links {
@@ -498,6 +641,15 @@
 
             .hero h1 {
                 font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
             }
 
             .about-content {
@@ -511,8 +663,9 @@
             .stats {
                 grid-template-columns: 1fr;
             }
-              .language-switcher {
-                order: -3;
+
+            .language-switcher {
+                order: -1;
             }
 
             .section-title {
@@ -531,283 +684,175 @@
             opacity: 1;
             transform: translateY(0);
         }
-    /* WhatsApp Float */
-    .whatsapp-float {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      z-index: 1000;
-      background: #25d366;
-      border-radius: 50%;
-      padding: 10px;
-      box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
-      transition: all 0.3s ease;
-    }
 
-    .whatsapp-float:hover {
-      transform: scale(1.1);
-      box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
-    }
-
-    .whatsapp-float img {
-      width: 40px;
-      height: 40px;
-      display: block;
-    }
-
-    .language-switcher {
-            display: flex;
-            gap: 10px;
-            background: rgba(0, 212, 255, 0.1);
-            padding: 5px;
-            border-radius: 25px;
-            border: 1px solid rgba(0, 212, 255, 0.3);
+        .hidden {
+            display: none;
         }
-
-        .lang-btn {
-            padding: 8px 16px;
-            background: transparent;
-            border: none;
-            border-radius: 20px;
-            color: #ccc;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            font-size: 0.9rem;
-        }
-
-        .lang-btn.active {
-            background: #00d4ff;
-            color: #000;
-            font-weight: 600;
-        }
-
-        .lang-btn:hover {
-            color: #00d4ff;
-        }
-         a{
-    text-decoration: none;
-   }
     </style>
 </head>
 <body>
     <nav id="navbar">
         <div class="nav-container">
-            <a href="#" class="logo">R.P Web-Works</a>
+            <a href="#" class="logo" onclick="showPage('home')">R.P Web-Works</a>
             <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#home" onclick="showPage('home')">Home</a></li>
+                <li><a href="#services" onclick="scrollToSection('services')">Services</a></li>
+                <li><a href="#about" onclick="scrollToSection('about')">About</a></li>
+                <li><a href="#contact" onclick="scrollToSection('contact')">Contact</a></li>
+                <li><a href="#" onclick="showPage('page2')">More Info</a></li>
             </ul>
-              <!--languge-->
-       <div class="language-switcher">
-               <a href="it-two.html"><button   class="lang-btn active"  >हिं</button>
-                <button class="lang-btn" onclick="switchLanguage('hindi')">EN</button> </a> 
+            <div class="language-switcher">
+                <button class="lang-btn active" onclick="switchLanguage('english')">EN</button>
+                <button class="lang-btn" onclick="switchLanguage('hindi')">हिं</button>
             </div>
         </div>
     </nav>
 
-    <section id="home" class="hero">
-        <div class="floating-element"></div>
-        <div class="floating-element"></div>
-        <div class="floating-element"></div>
-        <div class="hero-content">
-            <h1>Next-Gen IT Solutions</h1>
-            <p>Transforming businesses through innovative technology and cutting-edge software development</p>
-            <a href="it-project-two.html" class="cta-button">Get Started Today</a>
-        </div>
-    </section>
-
-    <section id="services" class="services">
-        <div class="container">
-            <h2 class="section-title fade-in">Our Services</h2>
-            <div class="services-grid">
-                <div class="service-card fade-in">
-                    <span class="service-icon">💻</span>
-                    <h3>Web Development</h3>
-                    <p>Custom web applications built with modern frameworks and technologies for optimal performance and user experience.</p>
-                </div>
-                <div class="service-card fade-in">
-                    <span class="service-icon">📱</span>
-                    <h3>Mobile App Development</h3>
-                    <p>Native and cross-platform mobile applications that engage users and drive business growth.</p>
-                </div>
-                <div class="service-card fade-in">
-                    <span class="service-icon">☁️</span>
-                    <h3>Cloud Solutions</h3>
-                    <p>Scalable cloud infrastructure and migration services to enhance your business operations and reduce costs.</p>
-                </div>
-                <div class="service-card fade-in">
-                    <span class="service-icon">🔒</span>
-                    <h3>Cybersecurity</h3>
-                    <p>Comprehensive security solutions to protect your digital assets and ensure business continuity.</p>
-                </div>
-                <div class="service-card fade-in">
-                    <span class="service-icon">🤖</span>
-                    <h3>AI & Machine Learning</h3>
-                    <p>Intelligent automation and data-driven insights to optimize your business processes and decision-making.</p>
-                </div>
-                <div class="service-card fade-in">
-                    <span class="service-icon">🔧</span>
-                    <h3>IT Consulting</h3>
-                    <p>Strategic technology consulting to align your IT infrastructure with your business objectives and goals.</p>
+    <!-- Page 1 - Home -->
+    <div id="page1" class="page-container">
+        <section id="home" class="hero">
+            <div class="floating-element"></div>
+            <div class="floating-element"></div>
+            <div class="floating-element"></div>
+            <div class="hero-content">
+                <h1 id="heroTitle">Next-Gen IT Solutions</h1>
+                <p id="heroSubtitle">Transforming businesses through innovative technology and cutting-edge software development</p>
+                <div class="cta-buttons">
+                    <a href="#" class="cta-button" onclick="showPage('page2')" id="getStartedBtn">Get Started Today</a>
+                    <a href="#services" class="cta-button secondary" onclick="scrollToSection('services')" id="learnMoreBtn">Learn More</a>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="about" class="about">
-        <div class="container">
-            <div class="about-content">
-                <div class="about-text fade-in">
-                    <h2>Leading the Digital Revolution</h2>
-                    <p>With over a decade of experience in the IT industry, R.P Developer Solutions has been at the forefront of technological innovation, helping businesses transform their operations and achieve unprecedented growth.</p>
-                    <p>Our team of expert developers, designers, and consultants work tirelessly to deliver cutting-edge solutions that not only meet but exceed our clients' expectations.</p>
-                </div>
-                <div class="stats fade-in">
-                    <div class="stat-item">
-                        <span class="stat-number">200+</span>
-                        <span class="stat-label">Projects Completed</span>
+        <section id="services" class="services">
+            <div class="container">
+                <h2 class="section-title fade-in" id="servicesTitle">Our Services</h2>
+                <div class="services-grid">
+                    <div class="service-card fade-in">
+                        <span class="service-icon">💻</span>
+                        <h3 id="webDevTitle">Web Development</h3>
+                        <p id="webDevDesc">Custom web applications built with modern frameworks and technologies for optimal performance and user experience.</p>
                     </div>
-                    <div class="stat-item">
-                        <span class="stat-number">150+</span>
-                        <span class="stat-label">Happy Clients</span>
+                    <div class="service-card fade-in">
+                        <span class="service-icon">📱</span>
+                        <h3 id="mobileDevTitle">Mobile App Development</h3>
+                        <p id="mobileDevDesc">Native and cross-platform mobile applications that engage users and drive business growth.</p>
                     </div>
-                    <div class="stat-item">
-                        <span class="stat-number">99%</span>
-                        <span class="stat-label">Customer Satisfaction</span>
+                    <div class="service-card fade-in">
+                        <span class="service-icon">☁️</span>
+                        <h3 id="cloudTitle">Cloud Solutions</h3>
+                        <p id="cloudDesc">Scalable cloud infrastructure and migration services to enhance your business operations and reduce costs.</p>
                     </div>
-                    <div class="stat-item">
-                        <span class="stat-number">24/7</span>
-                        <span class="stat-label">Support Available</span>
+                    <div class="service-card fade-in">
+                        <span class="service-icon">🔒</span>
+                        <h3 id="securityTitle">Cybersecurity</h3>
+                        <p id="securityDesc">Comprehensive security solutions to protect your digital assets and ensure business continuity.</p>
+                    </div>
+                    <div class="service-card fade-in">
+                        <span class="service-icon">🤖</span>
+                        <h3 id="aiTitle">AI & Machine Learning</h3>
+                        <p id="aiDesc">Intelligent automation and data-driven insights to optimize your business processes and decision-making.</p>
+                    </div>
+                    <div class="service-card fade-in">
+                        <span class="service-icon">🔧</span>
+                        <h3 id="consultingTitle">IT Consulting</h3>
+                        <p id="consultingDesc">Strategic technology consulting to align your IT infrastructure with your business objectives and goals.</p>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title fade-in">Get In Touch</h2>
-            <div class="contact-content">
-                <div class="contact-info fade-in">
-                    <h3>Let's Build Something Amazing Together</h3>
-                    <p>Ready to transform your business with cutting-edge technology? Our team is here to help you achieve your goals.</p>
-                      <p>Phone: <a style="color: #ccc;" href="tel:+918010824509">+91 8010824509</a></p>
-                   <p>Email: <a style="color: #ccc;" href="mailto:pkharpuriye80@gmail.com">pkharpuriye80@gmail.com</a></p>
-                    <p>Phone: <a style="color: #ccc;" href="tel:+917020886178">+91 7020886178</a></p>
-                   <p>Address: Near By Bharsing, Lohari Swanga Road<br>Pin Code: 441305</p>
+        <section id="about" class="about">
+            <div class="container">
+                <div class="about-content">
+                    <div class="about-text fade-in">
+                        <h2 id="aboutTitle">Leading the Digital Revolution</h2>
+                        <p id="aboutDesc1">With over a decade of experience in the IT industry, R.P Developer Solutions has been at the forefront of technological innovation, helping businesses transform their operations and achieve unprecedented growth.</p>
+                        <p id="aboutDesc2">Our team of expert developers, designers, and consultants work tirelessly to deliver cutting-edge solutions that not only meet but exceed our clients' expectations.</p>
+                    </div>
+                    <div class="stats fade-in">
+                        <div class="stat-item">
+                            <span class="stat-number">200+</span>
+                            <span class="stat-label" id="projectsLabel">Projects Completed</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">150+</span>
+                            <span class="stat-label" id="clientsLabel">Happy Clients</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">99%</span>
+                            <span class="stat-label" id="satisfactionLabel">Customer Satisfaction</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">24/7</span>
+                            <span class="stat-label" id="supportLabel">Support Available</span>
+                        </div>
+                    </div>
                 </div>
-                <form class="contact-form fade-in">
-                    <div class="form-group">
-                        <label for="name">Name</label>
-                        <input type="text"  id="name" placeholder="Enter Your Name" name="name"  required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" placeholder="Enter Your Email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" placeholder="Enter Your Message" rows="5" required></textarea>
-                    </div>
-                    <button type="submit" class="submit-btn">Send Message</button>
-                </form>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <footer>
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2 class="section-title fade-in" id="contactTitle">Get In Touch</h2>
+                <div class="contact-content">
+                    <div class="contact-info fade-in">
+                        <h3 id="contactSubtitle">Let's Build Something Amazing Together</h3>
+                        <p id="contactDesc">Ready to transform your business with cutting-edge technology? Our team is here to help you achieve your goals.</p>
+                        <p id="phoneLabel">Phone: <a style="color: #ccc;" href="tel:+918010824509">+91 8010824509</a></p>
+                        <p id="emailLabel">Email: <a style="color: #ccc;" href="mailto:pkharpuriye80@gmail.com">pkharpuriye80@gmail.com</a></p>
+                        <p id="phone2Label">Phone: <a style="color: #ccc;" href="tel:+917020886178">+91 7020886178</a></p>
+                        <p id="addressLabel">Address: Near By Bharsing, Lohari Swanga Road<br>Pin Code: 441305</p>
+                    </div>
+                    <form class="contact-form fade-in" onsubmit="submitForm(event)">
+                        <div class="form-group">
+                            <label for="name" id="nameLabel">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" id="emailFormLabel">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message" id="messageLabel">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn" id="submitBtn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Page 2 - More Info -->
+    <div id="page2" class="page-2">
         <div class="container">
-            <p>&copy; 2025 R.P. Developer Solutions. All rights reserved. | Innovating the future, one solution at a time.</p>
-        </div>
-    </footer>
-
-     <!-- WhatsApp Float Button -->
-    <a href="https://wa.me/918010824509" class="whatsapp-float" target="_blank">
-      <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="Chat on WhatsApp" />
-    </a>
-    <script>
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-
-        // Navbar scroll effect
-        window.addEventListener('scroll', function() {
-            const navbar = document.getElementById('navbar');
-            if (window.scrollY > 50) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
-        });
-
-        // Scroll animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver(function(entries) {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.fade-in').forEach(el => {
-            observer.observe(el);
-        });
-
-        // Form submission
-        document.querySelector('.contact-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Thank you for your message! We\'ll get back to you soon.');
-            this.reset();
-        });
-
-        // Counter animation for stats
-        function animateCounters() {
-            const counters = document.querySelectorAll('.stat-number');
-            counters.forEach(counter => {
-                const target = parseInt(counter.textContent.replace(/[^0-9]/g, ''));
-                const increment = target / 100;
-                let current = 0;
+            <a href="#" class="back-btn" onclick="showPage('home')" id="backBtn">← Back to Home</a>
+            
+            <div class="page-content">
+                <h2 id="page2Title">Advanced IT Solutions & Services</h2>
                 
-                const updateCounter = () => {
-                    if (current < target) {
-                        current += increment;
-                        counter.textContent = Math.floor(current) + (counter.textContent.includes('+') ? '+' : '');
-                        requestAnimationFrame(updateCounter);
-                    } else {
-                        counter.textContent = counter.textContent;
-                    }
-                };
+                <p id="page2Intro">Discover our comprehensive range of advanced IT solutions designed to propel your business into the future. We combine cutting-edge technology with industry expertise to deliver exceptional results.</p>
                 
-                updateCounter();
-            });
-        }
+                <h3 id="techStackTitle">Our Technology Stack</h3>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h4 id="frontendTitle">Frontend Technologies</h4>
+                        <p id="frontendDesc">React.js, Angular, Vue.js, Next.js, TypeScript, HTML5, CSS3, SASS, Tailwind CSS, Bootstrap</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4 id="backendTitle">Backend Technologies</h4>
+                        <p id="backendDesc">Node.js, Python, PHP, Java, .NET, Express.js, Django, Laravel, Spring Boot</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4 id="databaseTitle">Database Systems</h4>
+                        <p id="databaseDesc">MySQL, PostgreSQL, MongoDB, Redis, Firebase, Oracle, SQL Server</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4 id="cloudPlatformTitle">Cloud Platforms</h4>
+                        <p id="cloudPlatformDesc">AWS, Google Cloud, Microsoft Azure, DigitalOcean, Heroku, Vercel</p>
+                    </div>
+                </div>
 
-        // Trigger counter animation when stats section is visible
-        const statsObserver = new IntersectionObserver(function(entries) {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    animateCounters();
-                    statsObserver.unobserve(entry.target);
-                }
-            });
-        });
-
-        document.querySelector('.stats').addEventListener('load', () => {
-            statsObserver.observe(document.querySelector('.stats'));
-        });
-    </script>
-</body>
-</html>
+                <h3 id="whyChooseTitle">Why Choose R.P Developer?</h3>
+                <div class="feature-grid">

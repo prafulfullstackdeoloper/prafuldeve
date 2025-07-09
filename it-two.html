@@ -1,9 +1,14 @@
+Here's the HTML code translated into Hindi, while keeping the CSS and JavaScript as is, since they generally don't require language changes for functionality.
+
+I've focused on translating the visible text content within the HTML, such as headings, paragraphs, link text, and form labels.
+
+```html
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>R.P Developer</title>
+    <title>आर.पी डेवलपर</title>
     <style>
         * {
             margin: 0;
@@ -490,7 +495,39 @@
             color: #ccc;
         }
 
-        /* Responsive Design */
+
+        
+           .language-switcher {
+            display: flex;
+            gap: 10px;
+            background: rgba(0, 212, 255, 0.1);
+            padding: 5px;
+            border-radius: 25px;
+            border: 1px solid rgba(0, 212, 255, 0.3);
+        }
+
+        .lang-btn {
+            padding: 8px 16px;
+            background: transparent;
+            border: none;
+            border-radius: 20px;
+            color: #ccc;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+        }
+
+        .lang-btn.active {
+            background: #00d4ff;
+            color: #000;
+            font-weight: 600;
+        }
+
+        .lang-btn:hover {
+            color: #00d4ff;
+        }
+
+         /* Responsive Design */
         @media (max-width: 768px) {
             .nav-links {
                 display: none;
@@ -498,6 +535,15 @@
 
             .hero h1 {
                 font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
             }
 
             .about-content {
@@ -511,14 +557,19 @@
             .stats {
                 grid-template-columns: 1fr;
             }
-              .language-switcher {
-                order: -3;
+
+            .language-switcher {
+                order: -1;
             }
 
             .section-title {
                 font-size: 2rem;
             }
         }
+
+
+
+        
 
         /* Scroll Animations */
         .fade-in {
@@ -554,37 +605,7 @@
       height: 40px;
       display: block;
     }
-
-    .language-switcher {
-            display: flex;
-            gap: 10px;
-            background: rgba(0, 212, 255, 0.1);
-            padding: 5px;
-            border-radius: 25px;
-            border: 1px solid rgba(0, 212, 255, 0.3);
-        }
-
-        .lang-btn {
-            padding: 8px 16px;
-            background: transparent;
-            border: none;
-            border-radius: 20px;
-            color: #ccc;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            font-size: 0.9rem;
-        }
-
-        .lang-btn.active {
-            background: #00d4ff;
-            color: #000;
-            font-weight: 600;
-        }
-
-        .lang-btn:hover {
-            color: #00d4ff;
-        }
-         a{
+   a{
     text-decoration: none;
    }
     </style>
@@ -592,65 +613,68 @@
 <body>
     <nav id="navbar">
         <div class="nav-container">
-            <a href="#" class="logo">R.P Web-Works</a>
+            <a href="#" class="logo">आर.पी वेब-वर्क्स</a>
             <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
+             
+                <li><a href="#home">होम</a></li>
+                <li><a href="#services">सेवाएँ</a></li>
+                <li><a href="#about">हमारे बारे में</a></li>
+                <li><a href="#contact">संपर्क करें</a></li>
             </ul>
-              <!--languge-->
+            <a href="index.html">
+                <!--languge-->
        <div class="language-switcher">
-               <a href="it-two.html"><button   class="lang-btn active"  >हिं</button>
-                <button class="lang-btn" onclick="switchLanguage('hindi')">EN</button> </a> 
+                <button class="lang-btn active" onclick="switchLanguage('english')">EN</button>
+                <button class="lang-btn" onclick="switchLanguage('hindi')">हिं</button> </a>
             </div>
         </div>
     </nav>
+    
 
     <section id="home" class="hero">
         <div class="floating-element"></div>
         <div class="floating-element"></div>
         <div class="floating-element"></div>
         <div class="hero-content">
-            <h1>Next-Gen IT Solutions</h1>
-            <p>Transforming businesses through innovative technology and cutting-edge software development</p>
-            <a href="it-project-two.html" class="cta-button">Get Started Today</a>
+            <h1>अगली पीढ़ी के आईटी समाधान</h1>
+            <p>अभिनव तकनीक और अत्याधुनिक सॉफ्टवेयर डेवलपमेंट के माध्यम से व्यवसायों को बदलना</p>
+            <a href="it-project-two.html" class="cta-button">आज ही शुरू करें</a>
         </div>
     </section>
 
     <section id="services" class="services">
         <div class="container">
-            <h2 class="section-title fade-in">Our Services</h2>
+            <h2 class="section-title fade-in">हमारी सेवाएँ</h2>
             <div class="services-grid">
                 <div class="service-card fade-in">
                     <span class="service-icon">💻</span>
-                    <h3>Web Development</h3>
-                    <p>Custom web applications built with modern frameworks and technologies for optimal performance and user experience.</p>
+                    <h3>वेब डेवलपमेंट</h3>
+                    <p>इष्टतम प्रदर्शन और उपयोगकर्ता अनुभव के लिए आधुनिक फ्रेमवर्क और तकनीकों के साथ निर्मित कस्टम वेब एप्लिकेशन।</p>
                 </div>
                 <div class="service-card fade-in">
                     <span class="service-icon">📱</span>
-                    <h3>Mobile App Development</h3>
-                    <p>Native and cross-platform mobile applications that engage users and drive business growth.</p>
+                    <h3>मोबाइल ऐप डेवलपमेंट</h3>
+                    <p>देशी और क्रॉस-प्लेटफॉर्म मोबाइल एप्लिकेशन जो उपयोगकर्ताओं को संलग्न करते हैं और व्यावसायिक विकास को बढ़ावा देते हैं।</p>
                 </div>
                 <div class="service-card fade-in">
                     <span class="service-icon">☁️</span>
-                    <h3>Cloud Solutions</h3>
-                    <p>Scalable cloud infrastructure and migration services to enhance your business operations and reduce costs.</p>
+                    <h3>क्लाउड समाधान</h3>
+                    <p>आपके व्यावसायिक संचालन को बढ़ाने और लागत कम करने के लिए स्केलेबल क्लाउड इन्फ्रास्ट्रक्चर और माइग्रेशन सेवाएँ।</p>
                 </div>
                 <div class="service-card fade-in">
                     <span class="service-icon">🔒</span>
-                    <h3>Cybersecurity</h3>
-                    <p>Comprehensive security solutions to protect your digital assets and ensure business continuity.</p>
+                    <h3>साइबर सुरक्षा</h3>
+                    <p>आपकी डिजिटल संपत्तियों की सुरक्षा और व्यावसायिक निरंतरता सुनिश्चित करने के लिए व्यापक सुरक्षा समाधान।</p>
                 </div>
                 <div class="service-card fade-in">
                     <span class="service-icon">🤖</span>
-                    <h3>AI & Machine Learning</h3>
-                    <p>Intelligent automation and data-driven insights to optimize your business processes and decision-making.</p>
+                    <h3>एआई और मशीन लर्निंग</h3>
+                    <p>आपकी व्यावसायिक प्रक्रियाओं और निर्णय लेने को अनुकूलित करने के लिए बुद्धिमान स्वचालन और डेटा-संचालित अंतर्दृष्टि।</p>
                 </div>
                 <div class="service-card fade-in">
                     <span class="service-icon">🔧</span>
-                    <h3>IT Consulting</h3>
-                    <p>Strategic technology consulting to align your IT infrastructure with your business objectives and goals.</p>
+                    <h3>आईटी परामर्श</h3>
+                    <p>आपके आईटी इन्फ्रास्ट्रक्चर को आपके व्यावसायिक उद्देश्यों और लक्ष्यों के साथ संरेखित करने के लिए रणनीतिक प्रौद्योगिकी परामर्श।</p>
                 </div>
             </div>
         </div>
@@ -660,26 +684,26 @@
         <div class="container">
             <div class="about-content">
                 <div class="about-text fade-in">
-                    <h2>Leading the Digital Revolution</h2>
-                    <p>With over a decade of experience in the IT industry, R.P Developer Solutions has been at the forefront of technological innovation, helping businesses transform their operations and achieve unprecedented growth.</p>
-                    <p>Our team of expert developers, designers, and consultants work tirelessly to deliver cutting-edge solutions that not only meet but exceed our clients' expectations.</p>
+                    <h2>डिजिटल क्रांति का नेतृत्व कर रहे हैं</h2>
+                    <p>आईटी उद्योग में एक दशक से अधिक के अनुभव के साथ, आर.पी डेवलपर सॉल्यूशंस तकनीकी नवाचार में सबसे आगे रहा है, जो व्यवसायों को उनके संचालन को बदलने और अभूतपूर्व विकास प्राप्त करने में मदद कर रहा है।</p>
+                    <p>विशेषज्ञ डेवलपर्स, डिजाइनरों और सलाहकारों की हमारी टीम हमारे ग्राहकों की अपेक्षाओं को पूरा करने और उनसे आगे निकलने वाले अत्याधुनिक समाधान प्रदान करने के लिए अथक रूप से काम करती है।</p>
                 </div>
                 <div class="stats fade-in">
                     <div class="stat-item">
                         <span class="stat-number">200+</span>
-                        <span class="stat-label">Projects Completed</span>
+                        <span class="stat-label">परियोजनाएं पूरी कीं</span>
                     </div>
                     <div class="stat-item">
                         <span class="stat-number">150+</span>
-                        <span class="stat-label">Happy Clients</span>
+                        <span class="stat-label">खुश ग्राहक</span>
                     </div>
                     <div class="stat-item">
                         <span class="stat-number">99%</span>
-                        <span class="stat-label">Customer Satisfaction</span>
+                        <span class="stat-label">ग्राहक संतुष्टि</span>
                     </div>
                     <div class="stat-item">
                         <span class="stat-number">24/7</span>
-                        <span class="stat-label">Support Available</span>
+                        <span class="stat-label">समर्थन उपलब्ध</span>
                     </div>
                 </div>
             </div>
@@ -688,30 +712,30 @@
 
     <section id="contact" class="contact">
         <div class="container">
-            <h2 class="section-title fade-in">Get In Touch</h2>
+            <h2 class="section-title fade-in">हमसे संपर्क करें</h2>
             <div class="contact-content">
                 <div class="contact-info fade-in">
-                    <h3>Let's Build Something Amazing Together</h3>
-                    <p>Ready to transform your business with cutting-edge technology? Our team is here to help you achieve your goals.</p>
-                      <p>Phone: <a style="color: #ccc;" href="tel:+918010824509">+91 8010824509</a></p>
-                   <p>Email: <a style="color: #ccc;" href="mailto:pkharpuriye80@gmail.com">pkharpuriye80@gmail.com</a></p>
-                    <p>Phone: <a style="color: #ccc;" href="tel:+917020886178">+91 7020886178</a></p>
-                   <p>Address: Near By Bharsing, Lohari Swanga Road<br>Pin Code: 441305</p>
+                    <h3>आइए मिलकर कुछ अद्भुत बनाएं</h3>
+                    <p>अत्याधुनिक तकनीक के साथ अपने व्यवसाय को बदलने के लिए तैयार हैं? हमारी टीम आपके लक्ष्यों को प्राप्त करने में आपकी सहायता करने के लिए यहां है।</p>
+                    <p>फोन: <a style="color: #ccc;" href="tel:+918010824509">+91 8010824509</a></p>
+                    <p>ईमेल: <a style="color: #ccc;" href="mailto:pkharpuriye80@gmail.com">pkharpuriye80@gmail.com</a></p>
+                    <p>फोन: <a style="color: #ccc;" href="tel:+917020886178">+91 7020886178</a></p>
+                    <p>पता: नियर बाई भरसिंग, लोहारी स्वंगा रोड<br>पिन कोड: 441305</p>
                 </div>
                 <form class="contact-form fade-in">
                     <div class="form-group">
-                        <label for="name">Name</label>
-                        <input type="text"  id="name" placeholder="Enter Your Name" name="name"  required>
+                        <label for="name">नाम</label>
+                        <input type="text" id="name" name="name" required>
                     </div>
                     <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" placeholder="Enter Your Email" name="email" required>
+                        <label for="email">ईमेल</label>
+                        <input type="email" id="email" name="email" required>
                     </div>
                     <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" placeholder="Enter Your Message" rows="5" required></textarea>
+                        <label for="message">संदेश</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
                     </div>
-                    <button type="submit" class="submit-btn">Send Message</button>
+                    <button type="submit" class="submit-btn">संदेश भेजें</button>
                 </form>
             </div>
         </div>
@@ -719,13 +743,12 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2025 R.P. Developer Solutions. All rights reserved. | Innovating the future, one solution at a time.</p>
+            <p>&copy; 2025 आर.पी. डेवलपर सॉल्यूशंस। सर्वाधिकार सुरक्षित। | भविष्य का नवाचार, एक समय में एक समाधान।</p>
         </div>
     </footer>
 
-     <!-- WhatsApp Float Button -->
-    <a href="https://wa.me/918010824509" class="whatsapp-float" target="_blank">
-      <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="Chat on WhatsApp" />
+      <a href="https://wa.me/918010824509" class="whatsapp-float" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp पर चैट करें" />
     </a>
     <script>
         // Smooth scrolling for navigation links
@@ -769,7 +792,7 @@
         // Form submission
         document.querySelector('.contact-form').addEventListener('submit', function(e) {
             e.preventDefault();
-            alert('Thank you for your message! We\'ll get back to you soon.');
+            alert('आपके संदेश के लिए धन्यवाद! हम जल्द ही आपसे संपर्क करेंगे।');
             this.reset();
         });
 
@@ -811,3 +834,4 @@
     </script>
 </body>
 </html>
+```
